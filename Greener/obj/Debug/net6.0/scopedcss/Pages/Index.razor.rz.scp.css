@@ -1,4 +1,3 @@
-/* _content/Greener/Pages/Index.razor.rz.scp.css */
 body[b-j0g3p28o9h] {
 }
 .head2[b-j0g3p28o9h] {
@@ -36,24 +35,3 @@ body[b-j0g3p28o9h] {
   }
 }
 
-/* _content/Greener/Shared/MainLayout.razor.rz.scp.css */
-body[b-h25q02kojj] {
-}
-.head1[b-h25q02kojj] {
-  background: #DDE8D1;
-  height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-}
-.titleQuote[b-h25q02kojj] {
-
-  font-family: 'Josefin Slab', serif;
-  font-size: 22px;
-  color: #3A4653;
-}
-.titleMain[b-h25q02kojj] {
-  font-family: 'Island Moments', cursive;
-  font-size: 40px;
-  margin-top: -15px;
-}
