@@ -1,0 +1,33 @@
+﻿@page "/"
+
+@inherits PlantListModel
+
+<div class="head2">
+	<h1 class="title2">Plant List</h1> <button> + </button>
+</div>
+
+@code{
+ }
+
+<table class="MainTable">
+	<tr class="tableHead">
+		<th>Plant Name</th>
+		<th>Latin Name</th>
+		<th>Water</th>
+		<th>Feritilize</th>
+		<th>Take a Cutting</th>
+	</tr>
+	<tb class="contentMain">
+		@foreach (var plant in plants)
+		{
+			<tr>
+				<td> @plant.Name</td>
+				<td> @plant.LatinName</td>
+				<td> @plant.Watered </td>
+				<td> @plant.Feritilized</td>
+				<yd> @plant.Cutting </yd>
+			</tr>
+		}
+	</tb>
+</table>
+

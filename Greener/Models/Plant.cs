@@ -9,7 +9,7 @@ namespace Greener.Models
         [FirestoreProperty]
         public string Name { get; set; }
         [FirestoreProperty]
-        public string LatingName { get; set; }
+        public string LatinName { get; set; }
         [FirestoreProperty]
         public List<DateTime> Watered { get; set; }
         [FirestoreProperty]

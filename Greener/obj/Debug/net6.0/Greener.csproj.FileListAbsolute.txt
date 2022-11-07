@@ -24,7 +24,6 @@ C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\refint
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\Greener.pdb
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\Greener.genruntimeconfig.cache
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\ref\Greener.dll
-C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Google.Api.CommonProtos.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Google.Api.Gax.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Google.Api.Gax.Grpc.dll
@@ -57,3 +56,4 @@ C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Syncfu
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\System.Linq.Async.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\Greener.csproj.CopyComplete
+C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\PlantList.razor.rz.scp.css
