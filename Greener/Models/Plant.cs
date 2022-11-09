@@ -11,14 +11,14 @@ namespace Greener.Models
         [FirestoreProperty]
         public string LatinName { get; set; }
         [FirestoreProperty]
-        public List<DateTime> Watered { get; set; }
+        public List<string>? Watered { get; set; }
         [FirestoreProperty]
-        public List<DateTime> Feritilized { get; set; }
+        public List<string>? Feritilized { get; set; }
         [FirestoreProperty]
-        public List<DateTime> Cutting { get; set; }
+        public List<string>? Cutting { get; set; }
         [FirestoreProperty]
         public string SoilType { get; set; }
         [FirestoreProperty]
-        public DateTime Obtained { get; set; }
+        public string? Obtained { get; set; }
     }
 }

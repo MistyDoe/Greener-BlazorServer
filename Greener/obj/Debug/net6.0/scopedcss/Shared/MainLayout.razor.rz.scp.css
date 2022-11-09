@@ -1,11 +1,17 @@
 body[b-h25q02kojj] {
 }
+.page[b-h25q02kojj] {
+  margin:auto;
+}
 .head1[b-h25q02kojj] {
   background: #DDE8D1;
+  position: absolute;
   height: 15vh;
   display: flex;
   flex-direction: column;
   align-items:center;
+  width:100vw;
+  margin: auto;
 }
 .titleQuote[b-h25q02kojj] {
 

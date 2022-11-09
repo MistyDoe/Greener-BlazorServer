@@ -2,10 +2,11 @@
 using Greener.Interface;
 using Greener.Models;
 using Newtonsoft.Json;
+using System.Data;
 
 namespace Greener.DAT
 {
-    public class PlantDAT : IPlant
+    public class PlantDAT : IPlantDAT
     {
         string projectId;
         FirestoreDb firestoreDb;
@@ -44,7 +45,10 @@ namespace Greener.DAT
                     if ( document.Exists )
                     {
                         Dictionary<string, object> dictionary = document.ToDictionary();
-                        string json = JsonConvert.SerializeObject(dictionary);
+
+
+
+                        var json = JsonConvert.SerializeObject(dictionary);
                         Plant newPlant = JsonConvert.DeserializeObject<Plant>(json);
                         newPlant.Id = document.Id;
                         plants.Add(newPlant);
@@ -79,7 +83,7 @@ namespace Greener.DAT
         {
             try
             {
-                DocumentReference documentReference = firestoreDb.Collection("Plamts").Document(plant.Id);
+                DocumentReference documentReference = firestoreDb.Collection("Plants").Document(plant.Id);
                 await documentReference.SetAsync(plant, SetOptions.Overwrite);
             }
             catch ( Exception )
