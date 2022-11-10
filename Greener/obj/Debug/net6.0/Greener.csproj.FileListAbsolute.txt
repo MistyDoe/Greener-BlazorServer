@@ -57,3 +57,4 @@ C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\System
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\System.Linq.Async.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\Greener.csproj.CopyComplete
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\PlantList.razor.rz.scp.css
+C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\AddPlant.razor.rz.scp.css

@@ -21,6 +21,9 @@ tr {
   background: #ACE1DA;
   border-bottom: 1px solid #4DA27C;
 }
+td {
+  justify-content:space-between;
+}
 
 .mainTable {
   margin:auto;

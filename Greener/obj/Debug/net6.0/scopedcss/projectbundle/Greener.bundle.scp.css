@@ -1,3 +1,11 @@
+/* _content/Greener/Pages/AddPlant.razor.rz.scp.css */
+body[b-spf57z6yi4] {
+}
+.addPlantForm[b-spf57z6yi4] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* _content/Greener/Pages/PlantList.razor.rz.scp.css */
 body[b-ulsdhnu33s] {
 }
@@ -21,6 +29,9 @@ body[b-ulsdhnu33s] {
 tr[b-ulsdhnu33s] {
   background: #ACE1DA;
   border-bottom: 1px solid #4DA27C;
+}
+td[b-ulsdhnu33s] {
+  justify-content:space-between;
 }
 
 .mainTable[b-ulsdhnu33s] {

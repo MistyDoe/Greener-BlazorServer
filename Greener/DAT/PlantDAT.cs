@@ -23,6 +23,7 @@ namespace Greener.DAT
         {
             try
             {
+
                 CollectionReference collectionReference = firestoreDb.Collection("Plants");
                 await collectionReference.AddAsync(plant);
             }

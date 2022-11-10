@@ -1,5 +1,42 @@
-﻿<h3>AddPlant</h3>
+﻿@using Greener.Models
+<h3> New plant</h3>
 
+<EditForm EditContext="@editPlant" OnSubmit="HandleSubmit">
+<div>
+	<label for="Name">Name</label>
+	<InputText id="name" @bind-Value="@plant.Name" ></InputText>
+</div>
+<div>
+	<label for="LatinName">LatinName</label>
+		<InputText id="latinName" @bind-Value="@plant.LatinName"></InputText>
+</div>
+	<div>
+		<label for="SoilType">SoilType</label>
+		<InputText id="soilType" @bind-Value="@plant.SoilType"></InputText>
+	</div>
+	<div>
+		<label>Obtained</label>
+		<InputDate id="date" @bind-Value="date"></InputDate>
+	</div>
+	<button type="submit"> Add </button>
+</EditForm>
 @code {
+	protected Plant plant = new Plant();
+	private EditContext? editPlant;
+	private DateTime date { get; set; }
+	protected override void OnInitialized ( )
+	{
+		editPlant = new(plant);
+	}
 
+	public void HandleSubmit()
+	{
+		plant.Obtained = date.ToString();
+		plant.Cutting = new List<string>();
+		plant.Feritilized= new List<string>();
+		plant.Watered = new List<string>();
+		var context = new PlantDAT();
+		context.AddPlant(plant);
+
+	}
 }

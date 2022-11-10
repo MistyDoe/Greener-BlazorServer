@@ -7,7 +7,9 @@
 	<button class="addBttn" @onclick="() => addPlantComponent = true"> Add new plant </button>
 </div>
 
-@if (addPlantComponent)
+@*TODO Add dynamic onClick effect*@
+
+@if(addPlantComponent)
 {
 	<AddPlant/>
 }
@@ -25,10 +27,10 @@
 		{
 			<tr>
 				<td> @plant.Name</td>
-				<td> @plant.LatinName</td>
-				<td> @plant.Watered.Last() <button onclick="">Water </button> </td>
-				<td> @plant.Feritilized.Last() <button onclick=""> Feritilize </button></td>
-			<td> @plant.Cutting.Last() <button onclick=""> Cut </button> </td>
+				<td> @plant.LatinName</td>				
+				<td> @plant.Watered.Last() <button onclick="">Water </button> </td>				
+				<td> @plant.Feritilized.Last() <button onclick=""> Feritilize </button></td>			
+				<td> @plant.Cutting.Last() <button onclick=""> Cut </button> </td>	
 			</tr>
 		}
 	
