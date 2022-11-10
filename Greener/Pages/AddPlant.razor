@@ -1,10 +1,20 @@
-﻿
+﻿@page "/AddPlant"
 @using Greener.DAL
 @using Greener.Models
 
-<h3> New plant</h3>
+<style>
+	#GFG {
+		text-decoration: none;
+	}
+</style>
+<h3 class="head2">  New plant</h3>
+<div class="LayoutNewPlant">
 
-<EditForm EditContext="@editPlant" OnValidSubmit="HandleSubmit">
+
+
+
+<EditForm class="form" EditContext="@editPlant" OnValidSubmit="HandleSubmit">
+		<DataAnnotationsValidator />
 <div>
 	<label for="Name">Name</label>
 	<InputText id="name" @bind-Value="@plant.Name" ></InputText>
@@ -21,17 +31,19 @@
 		<label>Obtained</label>
 		<InputDate id="date" @bind-Value="date"></InputDate>
 	</div>
-	<button type="submit"> Add </button>
-	
+	<button class="addBttn" type="submit"> Add </button>
+		<button class="addBttn"> <NavLink class="bttnText" href="/"> Back to the list</NavLink></button>
+		
 </EditForm>
 
 
-@code {	
+@code {
 	protected Plant plant = new Plant();
 	private EditContext? editPlant;
 	private DateTime date { get; set; }
-	protected override void OnInitialized ( )
+	protected override void OnInitialized ()
 	{
+		
 		editPlant = new(plant);
 	}
 
@@ -45,3 +57,4 @@
 		context.AddPlant(plant);
 	}
 }
+</div>

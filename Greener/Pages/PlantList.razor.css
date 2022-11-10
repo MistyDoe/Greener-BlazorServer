@@ -9,13 +9,27 @@
   width: 100vw;
   height: 13vh;
   font-family: 'Josefin Slab', serif;
+  font-size:18px;
 }
 .addBttn {
   height: 5vh;
-  width: 15vh;
-  background:#ACE1DA;
+  width: 5vh;
+  background: #ACE1DA;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 10px;
+  text-decoration: none;
 }
+a {
+  text-decoration: none;
+}
+  a:after{
+    text-decoration: none;
+  }
+
 
 tr {
   background: #ACE1DA;
@@ -39,14 +53,5 @@ td {
 
 
 @media all and (max-width: 480px px) {
-  .head2 {
-    width:100vw;
-    color: red;
-  }
-  .mainTable {
-  margin-left:auto;
-  margin-right: auto;
-  
-  }
 }
 

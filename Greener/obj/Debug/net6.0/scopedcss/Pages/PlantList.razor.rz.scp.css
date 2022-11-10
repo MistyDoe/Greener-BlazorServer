@@ -9,13 +9,27 @@ body[b-ulsdhnu33s] {
   width: 100vw;
   height: 13vh;
   font-family: 'Josefin Slab', serif;
+  font-size:18px;
 }
 .addBttn[b-ulsdhnu33s] {
   height: 5vh;
-  width: 15vh;
-  background:#ACE1DA;
+  width: 5vh;
+  background: #ACE1DA;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 10px;
+  text-decoration: none;
 }
+a[b-ulsdhnu33s] {
+  text-decoration: none;
+}
+  a[b-ulsdhnu33s]:after{
+    text-decoration: none;
+  }
+
 
 tr[b-ulsdhnu33s] {
   background: #ACE1DA;
@@ -39,14 +53,5 @@ td[b-ulsdhnu33s] {
 
 
 @media all and (max-width: 480px px) {
-  .head2[b-ulsdhnu33s] {
-    width:100vw;
-    color: red;
-  }
-  .mainTable[b-ulsdhnu33s] {
-  margin-left:auto;
-  margin-right: auto;
-  
-  }
 }
 

@@ -6,7 +6,7 @@ namespace Greener.Interface
     {
         public Task<List<Plant>> AllPlants ( );
         public void AddPlant (Plant plant);
-        public void UpdtePlant (Plant plant);
+        public void UpdatePlant (Plant plant);
         public void RemovePlant (string Id);
     }
 }

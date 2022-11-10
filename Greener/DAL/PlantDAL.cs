@@ -80,7 +80,7 @@ namespace Greener.DAL
             }
         }
 
-        public async void UpdtePlant (Plant plant)
+        public async void UpdatePlant (Plant plant)
         {
             try
             {
