@@ -1,0 +1,19 @@
+﻿
+<input type="checkbox" class="addBttn" @bind="Value"> Add new plant </input>
+
+@code {
+	[Parameter]
+	public EventCallback<bool> ValueChanged { get; set; }
+	private bool _value;
+	[Parameter]
+	public bool Value
+	{
+		get { return _value; }
+		set { 
+			if (_value!= value)
+		{
+			_value = value; }
+			ValueChanged.InvokeAsync(_value);
+		}
+	}
+}

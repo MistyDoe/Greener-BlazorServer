@@ -1,18 +1,24 @@
 ﻿@page "/"
+@using Greener.DAL
 @using Greener.Models
 
 
 <div class="head2">
 	<h1 class="title2">Plant List </h1>
-	<button class="addBttn" @onclick="() => addPlantComponent = true"> Add new plant </button>
+	<div> Add new plant <AddPlantToggle @bind-Value="toggled"/> </div>
+	
 </div>
 
 @*TODO Add dynamic onClick effect*@
 
-@if(addPlantComponent)
+@if(toggled = true)
 {
 	<AddPlant/>
 }
+else
+{ 
+}
+
 
 <table class="mainTable">
 	<tr>
@@ -26,11 +32,32 @@
 		@foreach (var plant in plants)
 		{
 			<tr>
-				<td> @plant.Name</td>
-				<td> @plant.LatinName</td>				
-				<td> @plant.Watered.Last() <button onclick="">Water </button> </td>				
-				<td> @plant.Feritilized.Last() <button onclick=""> Feritilize </button></td>			
-				<td> @plant.Cutting.Last() <button onclick=""> Cut </button> </td>	
+			<td> @plant.Name</td>
+			<td> @plant.LatinName</td>
+			@if (!plant.Watered.Any())
+			{
+				<td> <button onclick="">Water </button> </td>
+			}
+			else
+			{
+			<td> @plant.Watered.Last() <button onclick="">Water </button> </td>
+			}
+			@if (!plant.Feritilized.Any())
+			{
+			<td> <button onclick="">Feritilize </button> </td>
+			}
+			else
+			{
+			<td> @plant.Feritilized.Last() <button onclick=""> Feritilize </button></td>
+			}
+			@if ( !plant.Cutting.Any() )
+			{
+				<td> <button onclick="">Cut </button> </td>
+			}
+			else
+			{
+				<td> @plant.Cutting.Last() <button onclick=""> Cut </button> </td>
+			}							
 			</tr>
 		}
 	
@@ -38,12 +65,25 @@
 
 
 @code{
-	public bool addPlantComponent;
+	bool toggled;
+	public bool addPlantComponent = false;
 	protected List<Plant> plants = new List<Plant>();
 	protected Plant plant = new Plant();
 	protected override async Task OnInitializedAsync ( )
 	{
-		var context = new PlantDAT();
+		var context = new PlantDAL();
 		plants = await context.AllPlants();
 	}
+	
+	
+	public bool AddPlantComponentHandle(bool val)
+	{
+		if (addPlantComponent = true)
+			return addPlantComponent = false;
+		else 
+		{
+			return addPlantComponent = true;
+		}
+	}
+
 }

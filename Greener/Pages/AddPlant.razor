@@ -1,7 +1,10 @@
-﻿@using Greener.Models
+﻿
+@using Greener.DAL
+@using Greener.Models
+
 <h3> New plant</h3>
 
-<EditForm EditContext="@editPlant" OnSubmit="HandleSubmit">
+<EditForm EditContext="@editPlant" OnValidSubmit="HandleSubmit">
 <div>
 	<label for="Name">Name</label>
 	<InputText id="name" @bind-Value="@plant.Name" ></InputText>
@@ -19,8 +22,11 @@
 		<InputDate id="date" @bind-Value="date"></InputDate>
 	</div>
 	<button type="submit"> Add </button>
+	
 </EditForm>
-@code {
+
+
+@code {	
 	protected Plant plant = new Plant();
 	private EditContext? editPlant;
 	private DateTime date { get; set; }
@@ -35,8 +41,7 @@
 		plant.Cutting = new List<string>();
 		plant.Feritilized= new List<string>();
 		plant.Watered = new List<string>();
-		var context = new PlantDAT();
+		var context = new PlantDAL();
 		context.AddPlant(plant);
-
 	}
 }
