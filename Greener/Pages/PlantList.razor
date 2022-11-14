@@ -3,13 +3,13 @@
 @using Greener.Models
 
 <div class="head2">
-	<h1 class="title2">Plant List   </h1>
-	<div class="addBttn"> <NavLink href="AddPlant">  + </NavLink> </div>
+	
+	<button class="addBttn" @onclick=@Show> Add new plant </button>
 </div>
+<div hidden="@IsShow"> <AddPlant/></div>
 
-@*TODO Add dynamic onClick effect*@
 
-
+<h1 class="title2">Plant List   </h1>
 <table class="mainTable">
 	<tr>
 		<th>Plant Name</th>
@@ -79,6 +79,10 @@
 	public DateTime date { get; set; }
 	protected List<Plant> plants = new List<Plant>();
 	protected Plant plant = new Plant();
+	private bool IsShow { get; set; } = false;
+	private void Show() {
+		IsShow = !IsShow;
+	}
 
 	protected override async Task OnInitializedAsync ( )
 	{
