@@ -1,0 +1,121 @@
+@using Greener.DAL
+@using Greener.Models
+
+
+
+<table class="mainTable">
+	@foreach ( var plant in plants )
+	{
+
+		<tr>
+			<th rowspan="4"> <button @onclick=@ShowDetail>&dArr;</button> @plant.Name</th>
+		</tr>
+			<tr>
+				<td>
+				<input type="date" placeholder="DD/MM/YYYY"
+				   onfocus="(this.type='date')"
+				   @bind="date">
+				<button class="EdBttbn" @onclick="()=> HandleWater(plant)"> &#127783; </button>
+				</td>
+			</tr>
+		<tr>
+			<td>
+				<input type="date" @bind="date">
+				<button class="EdBttbn" @onclick="()=> HandleFeritilize(plant)"> &#9752; </button>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="date" @bind="date">
+				<button class="EdBttbn" @onclick="()=> HandleCutting(plant)">&#9988; </button>
+			</td>		
+		</tr>
+		<div hidden = "@IsShown">
+			<div> Latin Name: @plant.LatinName
+			</div>
+			<div>
+				Last watered: @plant.Watered.Last()
+			</div>
+			<div>
+				Last Feritilized: @plant.Feritilized.Last()
+			</div>
+			<div>
+				Last Cut: 
+				@if (plant.Cutting.Count == 0)
+				{
+					<p>-</p>;
+				}
+				else
+				{ 
+					plant.Cutting.Last();
+				}
+			</div>
+			<div>
+				Soil Type: @plant.SoilType
+			</div>
+			<div>
+				<button @onclick=@HandleEdit>Edit</button>
+				<button @onclick=@HandleDelete>Delete</button>
+			</div>
+		</div>
+	}
+
+</table>
+
+@code{
+	public DateTime date { get; set; }
+	protected List<Plant> plants = new List<Plant>();
+	protected Plant plant = new Plant();
+	protected bool IsShown { get; set; } = true;
+
+	protected void ShowDetail()
+	{
+		IsShown = !IsShown;
+	}
+	protected override async Task OnInitializedAsync ( )
+	{
+		var context = new PlantDAL();
+		plants = await context.AllPlants();
+	}
+	public void HandleWater (Plant plant)
+	{
+
+		var dateString = date.ToString();
+		if ( plant.Watered == null )
+		{
+			plant.Watered = new List<string>();
+		}
+		plant.Watered.Add(dateString);
+		var context = new PlantDAL();
+		context.UpdatePlant(plant);
+	}
+	public void HandleFeritilize (Plant plant)
+	{
+		var dateString = date.ToString();
+		if ( plant.Feritilized == null )
+		{
+			plant.Feritilized = new List<string>();
+		}
+		plant.Feritilized.Add(dateString);
+		var context = new PlantDAL();
+		context.UpdatePlant(plant);
+	}
+	public void HandleCutting (Plant plant)
+	{
+		var dateString = date.ToString();
+		if ( plant.Cutting == null )
+		{
+			plant.Cutting = new List<string>();
+		}
+		plant.Cutting.Add(dateString);
+		var context = new PlantDAL();
+		context.UpdatePlant(plant);
+	}
+	protected void HandleEdit() 
+	{
+	}
+	protected void HandleDelete() 
+	{
+	}
+}

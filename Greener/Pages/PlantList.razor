@@ -2,126 +2,40 @@
 @using Greener.DAL
 @using Greener.Models
 
-<div class="head2">
-	
-	<button class="addBttn" @onclick=@Show> Add new plant </button>
+
+<div class="headTasks head2">
+	<button class="addBttn" @onclick=@ShowTask> Tasks </button>
 </div>
-<div hidden="@IsShow"> <AddPlant/></div>
+<div hidden="@IsShowTask"> <TaskList /></div>
 
-
-<h1 class="title2">Plant List   </h1>
-<table class="mainTable">
-	<tr>
-		<th>Plant Name</th>
-		<th>Latin Name</th>
-		<th>Last watered</th>
-		<th>Last Feritilized</th>
-		<th>Last cutting</th>
-		
-	</tr>	
-		@foreach (var plant in plants)
-	{
-
-			<tr>
-			<td> @plant.Name</td>
-			<td> @plant.LatinName</td>
-			@if (!plant.Watered.Any())
-			{
-				<td>
-					<input type="date" @bind="date">
-					<button @onclick="()=> HandleWater(plant)"> water </button></td>
-			}
-			else
-			{
-			<td> @plant.Watered.Last()
-				<input type="date" @bind= "date">
-					<button @onclick="()=> HandleWater(plant)"> water </button>
-				</td>
-			}
-			@if (!plant.Feritilized.Any())
-			{
-			<td>
-					<input type="date" @bind="date">
-					<button @onclick="()=> HandleFeritilize(plant)"> Feritilize </button>
-				
-				</td>
-			}
-			else
-			{
-				<td>
-					@plant.Feritilized.Last() <input type="date" @bind="date">
-					<button @onclick="()=> HandleFeritilize(plant)"> Feritilize </button>
-				</td>
-			}
-			@if ( !plant.Cutting.Any() )
-			{
-				<td>
-
-					<input type="date" @bind="date">
-					<button @onclick="()=> HandleCutting(plant)"> Cutting </button>
-				</td>
-			}
-			else
-			{
-				<td>
-					@plant.Cutting.Last() 
-					<input type="date" @bind="date">
-					<button @onclick="()=> HandleCutting(plant)"> Cutting </button>
-				</td>
-			}							
-			</tr>
-		}
+<div class="headAddNew head2">
 	
-</table>
+	<button class="addBttn" @onclick=@ShowAddNew> Add new plant </button>
+</div>
+<div hidden="@IsShowAdd"> <AddPlant/></div>
+
+<div class="headList head2">
+<button class="addBttn" @onclick=@ShowList>Plant List   </button>
+</div>
+<div hidden="@IsShowList"> <PlantListTable/> </div>
 
 
 @code{
-	public DateTime date { get; set; }
-	protected List<Plant> plants = new List<Plant>();
-	protected Plant plant = new Plant();
-	private bool IsShow { get; set; } = false;
-	private void Show() {
-		IsShow = !IsShow;
-	}
 
-	protected override async Task OnInitializedAsync ( )
+	private bool IsShowAdd { get; set; } = true;
+	private void ShowAddNew()
 	{
-		var context = new PlantDAL();
-		plants = await context.AllPlants();
+		IsShowAdd = !IsShowAdd;
 	}
-	public void HandleWater(Plant plant)
+	private bool IsShowList { get; set; } = true;
+	private void ShowList() 
 	{
-
-		var dateString = date.ToString();
-		if (plant.Watered == null)
-		{
-			plant.Watered = new List<string>();
-		}
-		plant.Watered.Add(dateString);
-		var context = new PlantDAL();
-		context.UpdatePlant(plant);
+		IsShowList = !IsShowList;
 	}
-	public void HandleFeritilize(Plant plant)
-	{ 
-		var dateString = date.ToString();
-		if ( plant.Feritilized == null )
-		{
-			plant.Feritilized = new List<string>();
-		}
-		plant.Feritilized.Add(dateString);
-		var context = new PlantDAL();
-		context.UpdatePlant(plant);
-	}
-	public void HandleCutting (Plant plant)
+	private bool IsShowTask { get; set; } = false;
+	private void ShowTask()
 	{
-		var dateString = date.ToString();
-		if ( plant.Cutting == null )
-		{
-			plant.Cutting = new List<string>();
-		}
-		plant.Cutting.Add(dateString);
-		var context = new PlantDAL();
-		context.UpdatePlant(plant);
+		IsShowTask = !IsShowTask;
 	}
 
 }

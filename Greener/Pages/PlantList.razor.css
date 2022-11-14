@@ -5,13 +5,23 @@
   width:95%;
 }
 .head2 {
-  background: #4DA27C;
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 10vh;
   font-family: 'Josefin Slab', serif;
   font-size:18px;
+}
+.headTasks {
+  background: #4DA27C;
+}
+
+.headAddNew {
+  background: #84CEB6;
+}
+
+.headList {
+  background: #ACE1DA;
 }
 .addBttn {
   cursor:pointer;
@@ -31,6 +41,10 @@ a {
   a:after{
     text-decoration: none;
   }
+.EdBttbn{
+  width: 30px;
+  height: 30px;
+}
 
 
 tr {

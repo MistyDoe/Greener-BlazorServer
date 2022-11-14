@@ -2,39 +2,30 @@
 @using Greener.DAL
 @using Greener.Models
 
-<style>
-	#GFG {
-		text-decoration: none;
-	}
-</style>
-<h3 class="head2">  New plant</h3>
+
 <div class="LayoutNewPlant">
-
-
-
-
-<EditForm class="form" EditContext="@editPlant" OnValidSubmit="HandleSubmit">
+<EditForm class="addPlant" EditContext="@editPlant" OnValidSubmit="HandleSubmit">
 		<DataAnnotationsValidator />
 <div>
 	<label for="Name">Name</label>
-	<InputText id="name" @bind-Value="@plant.Name" ></InputText>
+	<InputText class="inpTxt" id="name" @bind-Value="@plant.Name" ></InputText>
 </div>
 <div>
 	<label for="LatinName">LatinName</label>
-		<InputText id="latinName" @bind-Value="@plant.LatinName"></InputText>
+			<InputText class="inpTxt" id="latinName" @bind-Value="@plant.LatinName"></InputText>
 </div>
 	<div>
 		<label for="SoilType">SoilType</label>
-		<InputText id="soilType" @bind-Value="@plant.SoilType"></InputText>
+			<InputText class="inpTxt" id="soilType" @bind-Value="@plant.SoilType"></InputText>
 	</div>
 	<div>
 		<label>Obtained</label>
-		<InputDate id="date" @bind-Value="date"></InputDate>
+			<InputDate class="inpTxt" id="date" @bind-Value="date"></InputDate>
 	</div>
-	<button class="addBttn" type="submit"> Add </button>
-		<button class="addBttn"> <NavLink class="bttnText" href="/"> Back to the list</NavLink></button>
-		
+	<button class="addBttn" type="submit"> <div>Add</div> </button>
+				
 </EditForm>
+</div>
 
 
 @code {
@@ -57,4 +48,3 @@
 		context.AddPlant(plant);
 	}
 }
-</div>

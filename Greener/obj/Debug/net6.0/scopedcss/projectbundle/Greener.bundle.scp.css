@@ -1,8 +1,7 @@
 /* _content/Greener/Pages/AddPlant.razor.rz.scp.css */
 body[b-spf57z6yi4] {
 }
-.head2[b-spf57z6yi4] {
-  background: #4DA27C;
+.head2[b-spf57z6yi4] {  
   display: flex;
   align-items: center;
   justify-content:center;
@@ -12,19 +11,34 @@ body[b-spf57z6yi4] {
   font-family: 'Josefin Slab', serif;
   font-size:13px;
 }
+
 .LayoutNewPlant[b-spf57z6yi4] {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+[b-spf57z6yi4] .addPlant {
+  background: #DDE8D1;
+  border: 3px;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inpTxt[b-spf57z6yi4] {
+  background: #DDE8D1;
+  border: 2px #84CEB6;
+}
 .addBttn[b-spf57z6yi4] {
   height: 5vh;
   width: 15vh;
-  background: #ACE1DA;
+  background: #4DA27C;
   border: none;
-  display:flow;
-  align-items: center;
-  border-radius:5px;
+  border-radius: 5px;
 }
 /* _content/Greener/Pages/PlantList.razor.rz.scp.css */
 body[b-ulsdhnu33s], html[b-ulsdhnu33s] {
@@ -34,13 +48,23 @@ body[b-ulsdhnu33s], html[b-ulsdhnu33s] {
   width:95%;
 }
 .head2[b-ulsdhnu33s] {
-  background: #4DA27C;
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 10vh;
   font-family: 'Josefin Slab', serif;
   font-size:18px;
+}
+.headTasks[b-ulsdhnu33s] {
+  background: #4DA27C;
+}
+
+.headAddNew[b-ulsdhnu33s] {
+  background: #84CEB6;
+}
+
+.headList[b-ulsdhnu33s] {
+  background: #ACE1DA;
 }
 .addBttn[b-ulsdhnu33s] {
   cursor:pointer;
@@ -60,6 +84,10 @@ a[b-ulsdhnu33s] {
   a[b-ulsdhnu33s]:after{
     text-decoration: none;
   }
+.EdBttbn[b-ulsdhnu33s]{
+  width: 30px;
+  height: 30px;
+}
 
 
 tr[b-ulsdhnu33s] {

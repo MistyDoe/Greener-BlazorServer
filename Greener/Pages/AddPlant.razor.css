@@ -1,7 +1,6 @@
 ﻿body {
 }
-.head2 {
-  background: #4DA27C;
+.head2 {  
   display: flex;
   align-items: center;
   justify-content:center;
@@ -11,17 +10,32 @@
   font-family: 'Josefin Slab', serif;
   font-size:13px;
 }
+
 .LayoutNewPlant {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+::deep .addPlant {
+  background: #DDE8D1;
+  border: 3px;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inpTxt {
+  background: #DDE8D1;
+  border: 2px #84CEB6;
+}
 .addBttn {
   height: 5vh;
   width: 15vh;
-  background: #ACE1DA;
+  background: #4DA27C;
   border: none;
-  display:flow;
-  align-items: center;
-  border-radius:5px;
+  border-radius: 5px;
 }
