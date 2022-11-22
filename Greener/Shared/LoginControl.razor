@@ -3,9 +3,8 @@
 @inject IHttpContextAccessor _httpContextAccessor
 @inject HttpClient Http 
 @if (User.Identity.Name != null) 
-{     
-	<img src="@Avatar" />    
-	<b>You are logged in as: @GivenName @Surname</b>    
+{    
+	<b>Hi @GivenName !</b>    
 	<a class="ml-md-auto btn btn-primary" href="/Logout" target="_top">Logout</a> 
 }
 	else
