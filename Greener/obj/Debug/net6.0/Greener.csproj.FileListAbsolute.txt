@@ -56,7 +56,6 @@ C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Syncfu
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\System.Linq.Async.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\Greener.csproj.CopyComplete
-C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\PlantList.razor.rz.scp.css
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\AddPlant.razor.rz.scp.css
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\global.json
@@ -304,3 +303,4 @@ C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Micros
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\Greener.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\bundleconfig.json
+C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\Home.razor.rz.scp.css
