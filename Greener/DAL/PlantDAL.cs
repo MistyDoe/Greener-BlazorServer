@@ -46,9 +46,6 @@ namespace Greener.DAL
                     if ( document.Exists )
                     {
                         Dictionary<string, object> dictionary = document.ToDictionary();
-
-
-
                         var json = JsonConvert.SerializeObject(dictionary);
                         Plant newPlant = JsonConvert.DeserializeObject<Plant>(json);
                         newPlant.Id = document.Id;

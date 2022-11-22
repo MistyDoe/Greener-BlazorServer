@@ -1,7 +1,11 @@
 ﻿@page "/"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
 @using Greener.DAL
 @using Greener.Models
 
+<AuthorizeView>
+	<Authorized>
 
 <div class="headTasks head2">
 	<button class="addBttn" @onclick=@ShowTask> Tasks </button>
@@ -18,6 +22,13 @@
 <button class="addBttn" @onclick=@ShowList>Plant List   </button>
 </div>
 <div hidden="@IsShowList"> <PlantListTable/> </div>
+	</Authorized>
+	<NotAuthorized>
+		<p>Please Login or create an account. </p>
+
+	</NotAuthorized>
+
+</AuthorizeView>
 
 
 @code{
