@@ -1,7 +1,7 @@
 ﻿@using Greener.Models;
 
 
-<EditForm class="editPlant" EditContext="@editContext" OnSubmit="@HandleValidSubmition">
+<EditForm class="editPlant" EditContext="@editContext" OnSubmit="@HandleSubmition">
 	<div>
 		<label for="Name">Name
 		<InputText class="inpTxt" id="name" @bind-Value="@PlantEdit.Name"></InputText>
@@ -22,11 +22,6 @@
 			<InputDate class="inpTxt" id="date" @bind-Value="obtainedDate"></InputDate>
 		</label>
 	</div>
-	@foreach (string date in PlantEdit.Watered)
-	{
-		<div>@date</div> <button onclick="@HandleDateDelete"> Delete </button>
-	}
-
 </EditForm>
 
 
@@ -35,14 +30,14 @@
 	private EditContext? editContext;
 	[ParameterAttribute]
 	public Plant PlantEdit { get; set; }
-	//public EventCallback <Plant> PlantChanged { get; set; }
+	public EventCallback <Plant> PlantChanged { get; set; }
 	protected bool IsShown { get; set; } = true;
 	protected override async Task OnInitializedAsync ( )
 	{
-		//await PlantChanged.InvokeAsync();
+		await PlantChanged.InvokeAsync();
 		editContext = new(PlantEdit);
 	}
-	public void HandleValidSubmition()
+	public void HandleSubmition()
 	{
 
 	}

@@ -2,7 +2,7 @@
 @using Greener.Models
 
 <tr class="row">
-			<th class="PlantNameCell" rowspan="2"> <button @onclick=@ShowDetail>&dArr;</button> @CurrPlant.Name</th>
+	<th class="PlantNameCell" rowspan="2"> <button @onclick=@ShowDetail>&dArr;</button>  @CurrPlant.Name </th>
 		</tr>
 			<tr>
 				<td>
@@ -21,41 +21,42 @@
 			Last watered:
 				@if (CurrPlant.Watered.Count < 1)
 				{ 
-					
+				}
+				else
+				{			
+				@CurrPlant.Watered.Last().Substring(0,10)
+				}
+			</div>
+			<div>
+				Last Feritilized:
+				@if ( CurrPlant.Feritilized.Count < 1 )
+				{
 				}
 				else
 				{
-					@CurrPlant.Watered.Last().Substring(0,10)	
+					@CurrPlant.Feritilized.Last().Substring(0,10)
 				}
-	</div>
-			<div>
-		Last Feritilized:@if ( CurrPlant.Feritilized.Count < 1 )
-		{
-
-		}
-		else
-		{
-			@CurrPlant.Watered.Last().Substring(0,10)
-		}
 			</div>
 			<div>
-		Last Cut: @if ( CurrPlant.Cutting.Count < 1 )
-		{
-
-		}
-		else
-		{
-			@CurrPlant.Watered.Last().Substring(0,10)
-		}
+			Last Cut:
+				@if ( CurrPlant.Cutting.Count < 1 )
+				{
+				}
+				else
+				{
+					@CurrPlant.Cutting.Last().Substring(0,10)
+				}
 	       </div>
 			<div>
 				Soil Type: @CurrPlant.SoilType
 			</div>
 			<div>
-				<button class="addBttn" @onclick=@HandleEdit>Edit</button>
-				<button class="addBttn" @onclick=@HandleDelete>Delete</button>
-		
+		<button class="addBttn" @onclick=@ShowEdit>Edit</button>
+				<button class="addBttn" @onclick=@HandleDelete>Delete</button>		
 			</div>
+
+	@*<div hidden="@IsEdit"> <EditPlant /> </div>*@
+
 </td>
 
 
@@ -66,12 +67,18 @@
 	[Parameter]
 	public EventCallback<Plant> CurrPlantChanged { get; set; }
 	protected bool IsShown { get; set; } = true;
+	protected bool IsEdit { get; set; } = true;
+
 	protected override async Task OnInitializedAsync ( )
 	{
 		await CurrPlantChanged.InvokeAsync();
 	}
 
 	protected void ShowDetail()
+	{
+		IsShown = !IsShown;
+	}
+	protected void ShowEdit ( )
 	{
 		IsShown = !IsShown;
 	}
