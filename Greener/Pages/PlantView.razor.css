@@ -1,0 +1,13 @@
+﻿body {
+}
+.PlantNameCell {
+  min-width: 20vw;
+}
+.addBttn {
+  height: 4vh;
+  width: 13vh;
+  background: #4DA27C;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2vh;
+}

@@ -114,6 +114,26 @@ td[b-cobwx2tzws] {
 @media all and (max-width: 480px px) {
 }
 
+/* _content/Greener/Pages/PlantListTable.razor.rz.scp.css */
+body[b-6oqngw71ro] {
+}
+.mainTable[b-6oqngw71ro] {
+  margin:auto;
+}
+/* _content/Greener/Pages/PlantView.razor.rz.scp.css */
+body[b-siyvm3nd9e] {
+}
+.PlantNameCell[b-siyvm3nd9e] {
+  min-width: 20vw;
+}
+.addBttn[b-siyvm3nd9e] {
+  height: 4vh;
+  width: 13vh;
+  background: #4DA27C;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2vh;
+}
 /* _content/Greener/Shared/MainLayout.razor.rz.scp.css */
 body[b-h25q02kojj] {
 }

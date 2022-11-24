@@ -304,3 +304,5 @@ C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\Micros
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\Greener.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\bin\Debug\net6.0\bundleconfig.json
 C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\Home.razor.rz.scp.css
+C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\PlantListTable.razor.rz.scp.css
+C:\Users\migli\source\repos\Greener-BlazorServer\Greener\obj\Debug\net6.0\scopedcss\Pages\PlantView.razor.rz.scp.css

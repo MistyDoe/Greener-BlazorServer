@@ -1,8 +1,8 @@
 ﻿@using Greener.DAL
 @using Greener.Models
 
-<tr>
-			<th rowspan="4"> <button @onclick=@ShowDetail>&dArr;</button> @CurrPlant.Name</th>
+<tr class="row">
+			<th class="PlantNameCell" rowspan="4"> <button @onclick=@ShowDetail>&dArr;</button> @CurrPlant.Name</th>
 		</tr>
 			<tr>
 				<td>
@@ -25,35 +25,27 @@
 				<button class="EdBttbn" @onclick="()=> HandleCutting(CurrPlant)">&#9988; </button>
 			</td>		
 		</tr>
-		<div hidden = "@IsShown">
+		<td class="PlantDetail" colspan="2" hidden = "@IsShown">
 			<div> Latin Name: @CurrPlant.LatinName
 			</div>
 			<div>
-				Last watered: @CurrPlant.Watered.Last()
+				Last watered: @CurrPlant.Watered.Last().Substring(0,10)
 			</div>
 			<div>
-				Last Feritilized: @CurrPlant.Feritilized.Last()
+				Last Feritilized: @CurrPlant.Feritilized.Last().Substring(0,10)
 			</div>
 			<div>
-				Last Cut: 
-		@if (CurrPlant.Cutting.Count == 0)
-		{
-			<p>-</p>
-			;
-		}
-		else
-		{
-			CurrPlant.Cutting.Last();
-		}
-	</div>
-	<div>
-		Soil Type: @CurrPlant.SoilType
-	</div>
-	<div>
-		<button @onclick=@HandleEdit>Edit</button>
-		<button @onclick=@HandleDelete>Delete</button>
-	</div>
-</div>
+			Last Cut: @CurrPlant.Cutting.Last().Substring(0,10)
+	       </div>
+			<div>
+				Soil Type: @CurrPlant.SoilType
+			</div>
+			<div>
+				<button class="addBttn" @onclick=@HandleEdit>Edit</button>
+				<button class="addBttn" @onclick=@HandleDelete>Delete</button>
+		
+			</div>
+</td>
 
 
 @code{
