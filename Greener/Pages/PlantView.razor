@@ -2,40 +2,51 @@
 @using Greener.Models
 
 <tr class="row">
-			<th class="PlantNameCell" rowspan="4"> <button @onclick=@ShowDetail>&dArr;</button> @CurrPlant.Name</th>
+			<th class="PlantNameCell" rowspan="2"> <button @onclick=@ShowDetail>&dArr;</button> @CurrPlant.Name</th>
 		</tr>
 			<tr>
 				<td>
-				<input type="date" placeholder="DD/MM/YYYY"
-				   onfocus="(this.type='date')"
+				<input type="date" 
+				   
 				   @bind="date">
 				<button class="EdBttbn" @onclick="()=> HandleWater(CurrPlant)"> &#127783; </button>
+				<button class="EdBttbn" @onclick="()=> HandleFeritilize(CurrPlant)"> &#9752; </button>
+				<button class="EdBttbn" @onclick="()=> HandleCutting(CurrPlant)">&#9988; </button>
 				</td>
 			</tr>
-		<tr>
-			<td>
-				<input type="date" @bind="date">
-				<button class="EdBttbn" @onclick="()=> HandleFeritilize(CurrPlant)"> &#9752; </button>
-
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input type="date" @bind="date">
-				<button class="EdBttbn" @onclick="()=> HandleCutting(CurrPlant)">&#9988; </button>
-			</td>		
-		</tr>
 		<td class="PlantDetail" colspan="2" hidden = "@IsShown">
 			<div> Latin Name: @CurrPlant.LatinName
 			</div>
 			<div>
-				Last watered: @CurrPlant.Watered.Last().Substring(0,10)
+			Last watered:
+				@if (CurrPlant.Watered.Count < 1)
+				{ 
+					
+				}
+				else
+				{
+					@CurrPlant.Watered.Last().Substring(0,10)	
+				}
+	</div>
+			<div>
+		Last Feritilized:@if ( CurrPlant.Feritilized.Count < 1 )
+		{
+
+		}
+		else
+		{
+			@CurrPlant.Watered.Last().Substring(0,10)
+		}
 			</div>
 			<div>
-				Last Feritilized: @CurrPlant.Feritilized.Last().Substring(0,10)
-			</div>
-			<div>
-			Last Cut: @CurrPlant.Cutting.Last().Substring(0,10)
+		Last Cut: @if ( CurrPlant.Cutting.Count < 1 )
+		{
+
+		}
+		else
+		{
+			@CurrPlant.Watered.Last().Substring(0,10)
+		}
 	       </div>
 			<div>
 				Soil Type: @CurrPlant.SoilType
