@@ -21,6 +21,6 @@ dotnet run
  
  The application can be accessed at https://localhost:7048/
  
- ## Author
+ ## Author
  
  Migle Urbonaite @MistyDoe
