@@ -23,7 +23,7 @@
 <div class="headList head2">
 <button class="addBttn" @onclick=@ShowList>Plant List   </button>
 </div>
-<div hidden="@IsShowList"> <PlantListTable/> </div>
+<div hidden="@IsShowList"> <PlantListTable email = "@Email"/> </div>
 	</Authorized>
 	<NotAuthorized>
 		<p >Please Login using yout google account </p>
