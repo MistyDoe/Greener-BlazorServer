@@ -3,10 +3,12 @@
 @using Microsoft.AspNetCore.Authorization
 @using Greener.DAL
 @using Greener.Models
+@using System.Security.Claims;
+@inject IHttpContextAccessor _httpContextAccessor
 
 <AuthorizeView>
 	<Authorized>
-
+		<a>@Email email</a>
 <div class="headTasks head2">
 	<button class="addBttn" @onclick=@ShowTask> Tasks </button>
 </div>
@@ -31,8 +33,30 @@
 
 
 @code{
-
+	public string Email;
 	private bool IsShowAdd { get; set; } = true;
+
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+		try
+		{
+			var User = _httpContextAccessor.HttpContext.User;
+
+			var email = _httpContextAccessor.HttpContext.User
+			.FindFirst(ClaimTypes.Email);
+			if (email != null)
+			{
+				Email = email.Value;
+			}
+		}
+	catch (Exception)
+		{
+			
+			throw;
+		}
+	}
+
 	private void ShowAddNew()
 	{
 		IsShowAdd = !IsShowAdd;

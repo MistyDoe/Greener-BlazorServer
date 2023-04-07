@@ -19,36 +19,52 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/EditPlant.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFBsYW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/TaskList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza0xpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Shared/LoginControl.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luQ29udHJvbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/migli/source/repos/Greener-BlazorServer/Greener/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/AddPlant.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUGxhbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-spf57z6yi4
+
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-cobwx2tzws
+
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/PlantListTable.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhbnRMaXN0VGFibGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6oqngw71ro
+
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/PlantView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhbnRWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-siyvm3nd9e
+
 [C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-h25q02kojj
 
-[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-dktc8vgde4
-
 [C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/migli/source/repos/Greener-BlazorServer/Greener/Pages/_Host.cshtml]

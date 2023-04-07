@@ -4,12 +4,13 @@
 @inject HttpClient Http 
 @if (User.Identity.Name != null) 
 {    
-	<b>Hi @GivenName !</b>    
-	<a class="ml-md-auto btn btn-primary" href="/Logout" target="_top">Logout</a> 
+	<b>Hi @GivenName !</b>
+	
+	<a href="/Logout" target="_top">Logout</a> 
 }
 	else
 	{     
-		<a class="ml-md-auto btn btn-primary"        
+		<a         
 		href="/Login"        
 		target="_top">Login</a> 
 	} 
@@ -19,6 +20,7 @@
 	private string GivenName;
 	private string Surname;
 	private string Avatar;
+	public string Email;
 	protected override void OnInitialized()
 	{         
 		base.OnInitialized();
@@ -28,35 +30,41 @@
 			var givenName =                 
 				_httpContextAccessor.HttpContext.User                 
 				.FindFirst(ClaimTypes.GivenName);             
-				if (givenName != null)             
-				{                 
-					GivenName = givenName.Value;
-				}             
-				else             
-				{                 
-					GivenName = User.Identity.Name;
-				}                    
-				var surname = _httpContextAccessor.HttpContext.User                 
-				.FindFirst(ClaimTypes.Surname);             
-				if (surname != null)             
-				{                 
-					Surname = surname.Value;
-				}             
-				else
-				{                 
-					Surname = "";
-				}
-				var avatar = _httpContextAccessor.HttpContext.User
-				.FindFirst("urn:google:image");
-				if (avatar != null)
-				{
-					Avatar = avatar.Value;
-				}             
-				else
-				{
-					Avatar = "";
-				}
-				}
+			if (givenName != null)             
+			{                 
+				GivenName = givenName.Value;
+			}             
+			else             
+			{                 
+				GivenName = User.Identity.Name;
+			}                    
+			var surname = _httpContextAccessor.HttpContext.User                 
+			.FindFirst(ClaimTypes.Surname);             
+			if (surname != null)             
+			{                 
+				Surname = surname.Value;
+			}             
+			else
+			{                 
+				Surname = "";
+			}
+			var avatar = _httpContextAccessor.HttpContext.User
+			.FindFirst("urn:google:image");
+			if (avatar != null)
+			{
+				Avatar = avatar.Value;
+			}             
+			else
+			{
+				Avatar = "";
+			}
+			var email = _httpContextAccessor.HttpContext.User
+			.FindFirst(ClaimTypes.Email);
+			if(email !=null)
+			{
+				Email = email.Value;
+			}
+		}
 				catch {
 				}
 				} 
