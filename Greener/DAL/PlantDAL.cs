@@ -34,7 +34,7 @@ namespace Greener.DAL
 			}
 		}
 
-		public async Task<List<Plant>> AllPlants()
+		public async Task<List<Plant>> AllPlants(string email)
 		{
 			try
 			{

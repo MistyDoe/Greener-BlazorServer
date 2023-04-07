@@ -19,10 +19,13 @@
 @code {
 	protected List<Plant> plants = new List<Plant>();
 	protected Plant plant = new Plant();
+	
+	[Parameter]
+	public string email { get; set; }
 
 	protected override async Task OnInitializedAsync ( )
 	{
 		var context = new PlantDAL();
-		plants = await context.AllPlants();
+		plants = await context.AllPlants(email);
 	}
 }
